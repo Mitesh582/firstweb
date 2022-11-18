@@ -20,9 +20,10 @@ function App() {
       </header> */
       }
       
-      <h1>Hello Wolrd!</h1>
+      {/* <h1>Hello Wolrd!</h1>
       <h2>I Am Mitesh Jethava</h2>
-      <p> I am fron-end-devloper</p>
+      <p> I am fron-end-devloper</p> */}
+      <p>Hello !</p>
     </div>
   );
 }
