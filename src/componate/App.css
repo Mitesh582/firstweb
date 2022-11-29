@@ -1,0 +1,19 @@
+*{
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.card{
+  width: 1140px;
+  margin: 0 auto;
+  background-color:brown;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-items{
+  padding: 15px;
+  margin: 15px;
+  width: 30.33%;
+  border-radius: 15px;
+  text-align: center;
+  background-color:rgb(128, 128, 128);
+}
