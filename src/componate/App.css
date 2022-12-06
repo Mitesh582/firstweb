@@ -1,19 +1,64 @@
-*{
+* {
   margin: 0 auto;
   box-sizing: border-box;
 }
-.card{
+
+.card {
   width: 1140px;
   margin: 0 auto;
-  background-color:brown;
+  background-color: brown;
   display: flex;
   flex-wrap: wrap;
 }
-.card-items{
+
+.card-items {
   padding: 15px;
   margin: 15px;
   width: 30.33%;
   border-radius: 15px;
   text-align: center;
-  background-color:rgb(128, 128, 128);
+  background-color: rgb(128, 128, 128);
+}
+
+.container {
+  width: 1140px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.header-top {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(126, 187, 138);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul li {
+  text-decoration: none;
+  padding: 25px auto;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 24px;
+  transition: all 1s ease;
+}
+
+ul li:hover {
+  color: green;
+  font-size: 28px;
 }
