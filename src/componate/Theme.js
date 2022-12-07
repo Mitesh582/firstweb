@@ -5,7 +5,6 @@ class Theme extends React.Component{
     constructor(){
         super();
 
-
         this.state = {
             backgroundcolor : "red",
             color : "white"
@@ -68,3 +67,4 @@ class Theme extends React.Component{
 }
 
 export default Theme;
+
