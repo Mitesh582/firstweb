@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 // import { useFormik } from 'formik'
 import './ToDoApp.css'
 
+function getData() {
+    let datas = window.localStorage.getItem("MyData")
+    return JSON.parse(datas)
+}
+
 function ToDoApp() {
     const [items, setItems] = useState("");
-    const [addlist, setAddlist] = useState([]);
+    const [addlist, setAddlist] = useState(getData());
     
     const handleChange = (e) => {
         setItems(e.target.value);
@@ -34,6 +39,10 @@ function ToDoApp() {
         // setItems("");
 
     }
+
+    useEffect(() => {
+        window.localStorage.setItem("MyData", JSON.stringify(addlist))
+    }, [addlist])
     
 
     return (
@@ -58,8 +67,10 @@ function ToDoApp() {
                     }
                 </ol>
             </div>
-            <div className="controls">
-                <button className="clear-btn" onClick={() => {ClearAll()}}>Clear All</button>
+            <div className="controls">{
+                addlist.length > 1 ? 
+                    <button className="clear-btn" onClick={() => {ClearAll()}}>Clear All</button> : '' }
+                
             </div>
         </div>
 
