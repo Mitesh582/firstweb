@@ -1,32 +1,13 @@
 import React from "react";
-
 import './Counter.css'
+import UpdateCom from "./HOC";
 
 class Counter extends React.Component{
-    constructor(){
-        super();
-
-        this.state = {
-            count : 0
-        }
-    }
-    increment() {
-        this.setState(() => {
-            return{
-                count : this.state.count + 1
-            }
-        })
-    }
-    decriment() {
-        if (this.state.count > 0) {
-            this.setState({
-                count : this.state.count - 1
-            })
-        }
-    }
 
 
     render(){
+        const {count, incrementd, decrimentd} = this.props;
+
         return(<>
         <div className="container">
             <h1>
@@ -36,14 +17,14 @@ class Counter extends React.Component{
                 Class base components.....
             </h2>
             <p>
-                {this.state.count}
+                {count}
             </p>
             <div className="buttons">
-                <button onClick={() => {this.increment()}}>
+                <button onClick={incrementd}>
                     Incriment : +
                 </button>
                 
-                <button onClick={() => {this.decriment()}}>
+                <button onClick={decrimentd}>
                     Decriment : -
                 </button>
             </div>
@@ -54,4 +35,4 @@ class Counter extends React.Component{
     }
 }
 
-export default Counter;
+export default UpdateCom(Counter);
