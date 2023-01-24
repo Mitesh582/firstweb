@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap';
-import {BrowserRouter} from 'react-router-dom';
-import { Route,Routes } from 'react-router-dom';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/js/bootstrap';
+// import {BrowserRouter} from 'react-router-dom';
+// import { Route,Routes } from 'react-router-dom';
 // import Products from './Pages/Home/Products';
-import Home from './Pages/Home/Home';
-import Feature from './Pages/Home/Features/Features';
-import Header from './Header/Header'
-import View from './View/View';
-import Error from './Error/Error';
-import AddEmployee from './View/AddEmployee';
-import EmpView from './View/EmpView';
+// import ViewDetails from './Pages/ViewDetails';
+// import Home from './Pages/Home/Home';
+// import Feature from './Pages/Home/Features/Features';
+// import Header from './Header/Header'
+// import View from './View/View';
+// import Error from './Error/Error';
+// import AddEmployee from './View/AddEmployee';
+// import EmpView from './View/EmpView';
 // import CRUD from './componate/CRUD/CRUD';
 // import ToDoApp from './componate/ToDoApp';
 // import Register from './componate/Register';
@@ -35,18 +36,19 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
       <>
-      <BrowserRouter>
-            <Header />
-            <Routes>
-                <Route path='/' element={<Home/>}/>
-                <Route path='/View' element={<View/>}/>
-                <Route path='/Features' element={<Feature/>}/>
-                <Route path='/AddEmployee' element={<AddEmployee/>}/>
-                <Route path='*' element={<Error/>}/>
-                <Route path='/EmpView' element={<EmpView/>} />
+      {/* <BrowserRouter> */}
+            {/* <Header /> */}
+            {/* <Routes> */}
+                {/* <Route path='/' element={<Home/>}/> */}
+                {/* <Route path='/View' element={<View/>}/> */}
+                {/* <Route path='/Features' element={<Feature/>}/> */}
+                {/* <Route path='/AddEmployee' element={<AddEmployee/>}/> */}
+                {/* <Route path='*' element={<Error/>}/> */}
+                {/* <Route path='/EmpView' element={<EmpView/>} /> */}
                 {/* <Route path='/' element={<Products/>}/> */}
-            </Routes>
-        </BrowserRouter>
+                {/* <Route path='ViewDetails' element={<ViewDetails/>}/> */}
+            {/* </Routes> */}
+        {/* </BrowserRouter> */}
         {/* <CRUD/> */}
       {/* <Header logo='images/logo.png' dropdown='Pages' list = {lists} /> */}
       {/* <Header logo='images/logo2.png' dropdown='shop' /> */}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button, Container } from 'react-bootstrap'
 import { Form } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
@@ -16,6 +16,7 @@ function AddEmployee() {
     })
 
     const [storeData, setStoreData] = useState(GetData)
+    const [isSubmit, setIsSubmit] = useState(false);
 
     const handleChange = (e) => {
         const name = e.target.name
@@ -31,6 +32,7 @@ function AddEmployee() {
             console.error("Enter Value.....!");
         } else {
             setStoreData([...storeData, initial])
+            setIsSubmit(true);
             setInitial({
                 name: '',
                 email: '',
@@ -38,10 +40,18 @@ function AddEmployee() {
                 address: '',
                 gender: ''
             })    
-            navigate("/EmpView", {state : {data : [...storeData, initial]}})
+            // navigate("/EmpView", {state : {data : [...storeData, initial]}})
         }
     }
     console.log(storeData);
+
+    useEffect(() =>{
+        console.log("store useEfect");
+        localStorage.setItem("crud", JSON.stringify(storeData));
+        if(isSubmit){
+            navigate("/empview");
+        }
+    },[storeData])
 
     return (
         <>
