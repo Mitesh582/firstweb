@@ -1,51 +1,49 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import { Container, Card, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 function Products() {
+
+    const list = [{
+        img: "./images/Shoes-01.jpg",
+        details: 'Abacavir'
+    }, {
+        img: "./images/Laptop-01.jpg",
+        details: 'Abacavir'
+    }, {
+        img: "./images/Watch-01.jpg",
+        details: 'Abacavir'
+    }]
+
+    const Navigate = useNavigate();
+
+    const click = (i, d) => {
+        Navigate("/ViewDetails", { state: { data: d } })
+    }
+
     return (
-        <Container>
-        <h1 style={{textAlign : 'center'}}>Product Card</h1>
-            <Row style={{justifyContent : 'center'}}>
-            <Card className='col-3' style={{ margin : '20px'}}>
-                <Card.Img variant="top" src="./images/Shoes-01.jpg" style={{ width : '300px', height : '200px'}} />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="primary">View Details</Button>
-                </Card.Body>
-            </Card>
-
-            <Card className='col-3' style={{ margin : '20px'}}>
-                <Card.Img variant="top" src="./images/Laptop-01.jpg" style={{ width : '300px', height : '200px'}} />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="primary">View Details</Button>
-                </Card.Body>
-            </Card>
-
-            <Card className='col-3' style={{ margin : '20px'}}>
-                <Card.Img variant="top" src="./images/Watch-01.jpg" style={{ width : '300px', height : '200px'}} />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="primary">View Details</Button>
-                </Card.Body>
-            </Card>
-            </Row>
-            
-        </Container>
+        <>
+                <h1 style={{ textAlign: 'center' }}>Product Card</h1>
+            <Container style={{display:'flex', alignItems : 'center'}}>
+                {
+                    list.map((d, i) => {
+                        return (
+                            <Card className='col-3' style={{ margin: '20px'}} key={i}>
+                                <Card.Img style={{height:'200px'}} variant="top" src={d.img} />
+                                <Card.Body>
+                                    <Card.Title>Card Title</Card.Title>
+                                    <Card.Text>
+                                        Some quick example text to build on the card title and make up the
+                                        bulk of the card's content.
+                                    </Card.Text>
+                                    <Button variant="primary" onClick={() => { click(i, d) }}>View Details</Button>
+                                </Card.Body>
+                            </Card>
+                        )
+                    })
+                }
+            </Container>
+        </>
     );
 }
 
