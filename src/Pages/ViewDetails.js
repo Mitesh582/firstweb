@@ -18,8 +18,12 @@ function ViewDetails() {
     <>
       <Container>
         <h1 style={{ textAlign: "center" }}>Card</h1>
-        <h2>{proData.details}</h2>
-        <img style={{width : '50%'}} src={proData.img} alt={proData.details} />
+        <h2>{proData.title}</h2>
+        <img style={{ width: '50%' }} src={proData.img} />
+        <h4>{proData.title}</h4>
+        <h5>{`${proData.price} Rs.`}</h5>
+        <h5>{proData.description}</h5>
+        <p>{proData.details}</p>
         <br />
         <Button onClick={() => { back() }}>back</Button>
       </Container>
