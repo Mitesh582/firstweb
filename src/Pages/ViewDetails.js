@@ -5,7 +5,6 @@ import { Button, Container } from 'react-bootstrap';
 function ViewDetails() {
   const nav = useNavigate();
   const Location = useLocation();
-  //   console.log(Location);
 
   const proData = Location.state.data;
   console.log("proData", proData.details);

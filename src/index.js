@@ -46,7 +46,7 @@ root.render(
                 {/* <Route path='/AddEmployee' element={<AddEmployee/>}/> */}
                 {/* <Route path='*' element={<Error/>}/> */}
                 {/* <Route path='/EmpView' element={<EmpView/>} /> */}
-                <Route path='/' element={<Products/>}/>
+                <Route path='/' element={<Products/>}/> 
                 {/* <Route path='/Product' element={<Product/>}/> */}
                 <Route path='/ViewDetails' element={<ViewDetails/>}/>
             </Routes>
