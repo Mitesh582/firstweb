@@ -21,7 +21,7 @@ function AddEmployee() {
     const handleChange = (e) => {
         const name = e.target.name
         const value = e.target.value
-        setInitial({ ...initial, [name] : value })
+        setInitial({ ...initial, [name] : value, id : new Date().toLocaleTimeString() })
     }
 
     const handleSubmit = (e) => {
