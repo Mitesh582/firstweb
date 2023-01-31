@@ -13,6 +13,9 @@ function Home() {
     // nav("/View", {state : {data : list , msg : "Hello...!"}})
     nav("/EmpView")
   }
+  const productView = () => {
+    nav("/Product")
+  }
   const back = () => {
     nav("/back")
   }
@@ -25,6 +28,7 @@ function Home() {
       <div>Home</div>
       <Container>
         <Button variant='primary' onClick={() => { click() }}>View</Button>
+        <Button variant='primary' onClick={() => { productView() }}>Products</Button>
         <Button variant='primary' onClick={() => { back() }}>Back</Button>
         <Button variant='primary' onClick={() => { Add() }}>AddEmployee</Button>
       </Container>

@@ -4,16 +4,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
 import {BrowserRouter} from 'react-router-dom';
 import { Route,Routes } from 'react-router-dom';
-import Products from './Pages/Home/Products';
+// import Products from './Pages/Home/Products';
 import ViewDetails from './Pages/ViewDetails';
-// import Home from './Pages/Home/Home';
-// import Feature from './Pages/Home/Features/Features';
-// import Header from './Header/Header'
-// import View from './View/View';
-// import Error from './Error/Error';
-// import AddEmployee from './View/AddEmployee';
-// import EmpView from './View/EmpView';
-// import Product from './Pages/Home/Product'
+import Home from './Pages/Home/Home';
+import Feature from './Pages/Home/Features/Features';
+import Header from './Header/Header'
+import View from './View/View';
+import Error from './Error/Error';
+import AddEmployee from './View/AddEmployee';
+import EmpView from './View/EmpView';
+import Product from './Pages/Home/Product'
 // import CRUD from './componate/CRUD/CRUD';
 // import ToDoApp from './componate/ToDoApp';
 // import Register from './componate/Register';
@@ -38,16 +38,16 @@ root.render(
 
       <>
       <BrowserRouter>
-            {/* <Header /> */}
+            <Header />
             <Routes>
-                {/* <Route path='/' element={<Home/>}/> */}
-                {/* <Route path='/View' element={<View/>}/> */}
-                {/* <Route path='/Features' element={<Feature/>}/> */}
-                {/* <Route path='/AddEmployee' element={<AddEmployee/>}/> */}
-                {/* <Route path='*' element={<Error/>}/> */}
-                {/* <Route path='/EmpView' element={<EmpView/>} /> */}
-                <Route path='/' element={<Products/>}/> 
-                {/* <Route path='/Product' element={<Product/>}/> */}
+                <Route path='/' element={<Home/>}/>
+                <Route path='/View' element={<View/>}/>
+                <Route path='/Features' element={<Feature/>}/>
+                <Route path='/AddEmployee' element={<AddEmployee/>}/>
+                <Route path='*' element={<Error/>}/>
+                <Route path='/EmpView' element={<EmpView/>} />
+                {/* <Route path='/' element={<Products/>}/> */}
+                <Route path='/Product' element={<Product/>}/>
                 <Route path='/ViewDetails' element={<ViewDetails/>}/>
             </Routes>
         </BrowserRouter>
