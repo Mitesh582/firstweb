@@ -17,5 +17,5 @@ function App() {
     </>
   )
 }
-export {Menus, Comp};
+// export {Menus, Comp};
 export default App
